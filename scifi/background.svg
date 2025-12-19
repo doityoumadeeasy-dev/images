@@ -1,0 +1,74 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Imperial glow -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="6" result="blur"></feGaussianBlur>
+      <feMerge>
+        <feMergeNode in="blur"></feMergeNode>
+        <feMergeNode in="SourceGraphic"></feMergeNode>
+      </feMerge>
+    </filter>
+
+    <!-- Blink animation -->
+    <animate id="blink" attributeName="opacity" values="0.3;1;0.3" dur="1.8s" repeatCount="indefinite"></animate>
+  </defs>
+
+  <!-- Background metal -->
+  <rect width="100%" height="100%" fill="#0b0f14"></rect>
+
+  <!-- Panel grid -->
+  <g fill="#121820">
+    <rect x="100" y="120" width="400" height="260" rx="16"></rect>
+    <rect x="600" y="120" width="400" height="260" rx="16"></rect>
+    <rect x="1100" y="120" width="400" height="260" rx="16"></rect>
+
+    <rect x="100" y="460" width="400" height="260" rx="16"></rect>
+    <rect x="600" y="460" width="400" height="260" rx="16"></rect>
+    <rect x="1100" y="460" width="400" height="260" rx="16"></rect>
+  </g>
+
+  <!-- Central reactor ring -->
+  <circle cx="800" cy="240" r="70" fill="none" stroke="#00eaff" stroke-width="6" filter="url(#glow)">
+    <animate attributeName="stroke-opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"></animate>
+  </circle>
+
+  <!-- Blinking light strips -->
+  <g filter="url(#glow)" fill="#00eaff">
+    <rect x="180" y="410" width="120" height="6">
+      <animate attributeName="opacity" values="0.2;1;0.2" dur="1.4s" repeatCount="indefinite"></animate>
+    </rect>
+    <rect x="680" y="410" width="120" height="6">
+      <animate attributeName="opacity" values="1;0.3;1" dur="1.9s" repeatCount="indefinite"></animate>
+    </rect>
+    <rect x="1180" y="410" width="120" height="6">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="1.6s" repeatCount="indefinite"></animate>
+    </rect>
+
+    <rect x="180" y="740" width="120" height="6">
+      <animate attributeName="opacity" values="1;0.2;1" dur="1.7s" repeatCount="indefinite"></animate>
+    </rect>
+    <rect x="680" y="740" width="120" height="6">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2.1s" repeatCount="indefinite"></animate>
+    </rect>
+    <rect x="1180" y="740" width="120" height="6">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="1.5s" repeatCount="indefinite"></animate>
+    </rect>
+  </g>
+
+  <!-- Subtle corner indicators -->
+  <g fill="#ffffff" filter="url(#glow)">
+    <circle cx="60" cy="60" r="6">
+      <animate attributeName="opacity" values="0.2;1;0.2" dur="2.5s" repeatCount="indefinite"></animate>
+    </circle>
+    <circle cx="1540" cy="60" r="6">
+      <animate attributeName="opacity" values="1;0.3;1" dur="3s" repeatCount="indefinite"></animate>
+    </circle>
+    <circle cx="60" cy="840" r="6">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2.2s" repeatCount="indefinite"></animate>
+    </circle>
+    <circle cx="1540" cy="840" r="6">
+      <animate attributeName="opacity" values="1;0.4;1" dur="2.8s" repeatCount="indefinite"></animate>
+    </circle>
+  </g>
+
+</svg>
