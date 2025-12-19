@@ -1,0 +1,10 @@
+<svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <!-- Housing -->
+  <circle cx="25" cy="25" r="14" fill="#0b0e11"></circle>
+
+  <!-- Lens -->
+  <circle cx="25" cy="25" r="10" fill="#1a232a"></circle>
+
+  <!-- Rim -->
+  <circle cx="25" cy="25" r="14" fill="none" stroke="#2a3138" stroke-width="2"></circle>
+</svg>

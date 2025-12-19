@@ -1,0 +1,30 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="metalOn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1f2b33"></stop>
+      <stop offset="100%" stop-color="#12181d"></stop>
+    </linearGradient>
+
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"></feGaussianBlur>
+      <feMerge>
+        <feMergeNode in="blur"></feMergeNode>
+        <feMergeNode in="SourceGraphic"></feMergeNode>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Outer frame -->
+  <rect x="8" y="8" width="84" height="84" rx="10" fill="#0b0e11"></rect>
+
+  <!-- Inner panel -->
+  <rect x="14" y="14" width="72" height="72" rx="8" fill="url(#metalOn)"></rect>
+
+  <!-- Cyan activation core -->
+  <rect x="22" y="22" width="56" height="56" rx="6" fill="#00eaff" opacity="0.85" filter="url(#glow)">
+    <animate attributeName="opacity" values="0.7;0.95;0.7" dur="1.6s" repeatCount="indefinite"></animate>
+  </rect>
+
+  <!-- Bevel -->
+  <rect x="14" y="14" width="72" height="72" rx="8" fill="none" stroke="#3bdcff" stroke-width="1.5"></rect>
+</svg>

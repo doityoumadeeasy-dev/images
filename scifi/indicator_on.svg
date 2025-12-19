@@ -1,0 +1,21 @@
+<svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+    <radialGradient id="coreGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e8ffff"></stop>
+      <stop offset="60%" stop-color="#00eaff"></stop>
+      <stop offset="100%" stop-color="#007a88"></stop>
+    </radialGradient>
+  </defs>
+
+  <!-- Housing -->
+  <circle cx="25" cy="25" r="14" fill="#0b0e11"></circle>
+
+  <!-- Active lens (contained glow) -->
+  <circle cx="25" cy="25" r="9" fill="url(#coreGlow)">
+    <animate attributeName="opacity" values="0.85;1;0.85" dur="1.6s" repeatCount="indefinite"></animate>
+  </circle>
+
+  <!-- Crisp rim -->
+  <circle cx="25" cy="25" r="14" fill="none" stroke="#2fd9ff" stroke-width="1.5"></circle>
+</svg>

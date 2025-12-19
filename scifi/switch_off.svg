@@ -1,0 +1,17 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="metal" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1c2228"></stop>
+      <stop offset="100%" stop-color="#0f1317"></stop>
+    </linearGradient>
+  </defs>
+
+  <!-- Outer frame -->
+  <rect x="8" y="8" width="84" height="84" rx="10" fill="#0b0e11"></rect>
+
+  <!-- Inner panel -->
+  <rect x="14" y="14" width="72" height="72" rx="8" fill="url(#metal)"></rect>
+
+  <!-- Bevel -->
+  <rect x="14" y="14" width="72" height="72" rx="8" fill="none" stroke="#2a3138" stroke-width="2"></rect>
+</svg>
